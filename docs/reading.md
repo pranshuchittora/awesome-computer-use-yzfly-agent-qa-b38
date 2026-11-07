@@ -1,6 +1,6 @@
 # 官方文档、博文与参考实现
 
-[返回清单](../README.md) · [选型指南](guide.md)
+[返回清单](../README.md) · [选型指南](guide.md) · [远程自动化方案](remote-automation.md)
 
 整理日期：2026-11-06。优先链接项目作者、官方文档和源代码。历史文章用于理解技术演进，安装参数、模型支持和可用性以当前文档为准。
 
@@ -12,6 +12,7 @@
 | [Computer Use Tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool) | 当前 API 文档 | 应用如何执行模型请求的截图、点击、输入并回传结果 |
 | [Claude Computer Use Demo](https://github.com/anthropics/claude-quickstarts/tree/main/computer-use-demo) | 官方 GitHub 示例 | 把模型 API、桌面容器与工具循环连接起来 |
 | [Run Claude Code programmatically](https://code.claude.com/docs/en/headless) | 当前 CLI 文档 | 非交互运行、结构化输出与脚本集成 |
+| [Remote Control](https://code.claude.com/docs/en/remote-control) | 当前远程连接文档 | 手机 / Web 继续主机会话、登录要求与进程生命周期 |
 | [Claude Agent SDK for Python](https://github.com/anthropics/claude-agent-sdk-python) | 官方 SDK | 把 Agent 循环接入自己的程序 |
 
 ## Codex 与 OpenAI
@@ -22,6 +23,7 @@
 | [Non-interactive mode](https://learn.chatgpt.com/docs/non-interactive-mode) | 当前文档 | `codex exec`、JSONL 与流水线调用 |
 | [Scheduled tasks / Automations](https://learn.chatgpt.com/docs/automations) | 当前产品文档 | 周期任务、桌面运行要求与 Web 任务边界 |
 | [Computer Use](https://learn.chatgpt.com/docs/computer-use) | 当前产品文档 | 桌面应用操作、系统支持和授权入口 |
+| [Remote Connections](https://learn.chatgpt.com/docs/remote-connections) | 当前远程连接文档 | 手机连接主机，以及桌面应用通过 SSH 使用远端项目 |
 | [API Computer Use](https://developers.openai.com/api/docs/guides/tools-computer-use) | 当前 API 文档 | 自建环境中的动作执行与截图回传循环 |
 | [Codex GitHub Action](https://github.com/openai/codex-action) | 官方 GitHub 项目 | 把 Codex 接入仓库自动化 |
 

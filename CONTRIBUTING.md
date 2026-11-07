@@ -19,7 +19,7 @@
 | 字段 | 内容 |
 | --- | --- |
 | `name` | 展示名称 |
-| `category` | `desktop`、`browser`、`harness`、`dsh`、`cli`、`sandbox`、`mobile`、`workflow`、`scripting`、`benchmark` |
+| `category` | `desktop`、`browser`、`harness`、`tooling`、`dsh`、`cli`、`sandbox`、`remote`、`mobile`、`workflow`、`scripting`、`benchmark` |
 | `repository` | 当前规范仓库 `owner/repo` |
 | `github` | 仓库或明确组件的 GitHub 链接 |
 | `interfaces` | CLI、MCP、SDK 等接口数组 |
@@ -35,6 +35,7 @@
 同一仓库的不同组件仅在用途和链接均明确不同的情况下分开列出，不用重复条目填充数量。迁移时更新规范地址与来源，不保留一组新旧重复条目。
 
 ```bash
+python3 scripts/update_stars.py
 python3 scripts/render_readme.py
 python3 scripts/render_readme.py --check
 git diff --check
@@ -42,6 +43,10 @@ git diff --check
 
 渲染器只用 Python 标准库，检查字段、重复链接、分类和 README 一致性，不联网、不执行收录工具。提交前还需手动打开新增链接核对内容。
 
-选型建议和阅读资料分别维护在 `docs/guide.md`、`docs/reading.md`。调整 README 的导言或表格结构时修改 `scripts/render_readme.py`。
+Star 数的唯一数据源为 `data/github-stars.json`。`update_stars.py` 需要已安装、已登录的 `gh`，通过 GitHub REST API 获取数值，按仓库去重，全部请求成功后才替换旧快照。仓库迁移时先更新条目与来源；归档项目需重新评估。刷新统计不会更新条目的内容核验日期。
+
+README 按分类内 Star 数降序排列，显示统计时间；组件复用其所属仓库的 Star 数。迁移到新仓库的项目只显示新仓库统计，不累加旧仓库数量。Star 是关注度参考，不作为唯一质量标准，也不自动触发新项目收录。
+
+选型建议、远程方案和阅读资料分别维护在 `docs/guide.md`、`docs/remote-automation.md`、`docs/reading.md`。调整 README 的导言或表格结构时修改 `scripts/render_readme.py`。
 
 请在 PR 里说明真实使用场景和上游证据。只建议项目也可以使用 Issue 模板。

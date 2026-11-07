@@ -1519,5 +1519,629 @@
     ],
     "checked_at": "2026-11-06",
     "verification": "upstream-docs"
+  },
+  {
+    "name": "喜鹊 Magpie",
+    "category": "tooling",
+    "repository": "yetone/magpie",
+    "github": "https://github.com/yetone/magpie",
+    "interfaces": [
+      "App",
+      "CLI",
+      "本地网关"
+    ],
+    "platforms": "macOS / Windows / Linux 等",
+    "description": "统一管理多个 Agent 的模型、供应商、配置和工具资源，通过本地网关切换模型路线。",
+    "note": "具体代理、模型与平台能力按上游支持表配置；不内置桌面动作驱动。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/yetone/magpie/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "CC Switch",
+    "category": "tooling",
+    "repository": "farion1231/cc-switch",
+    "github": "https://github.com/farion1231/cc-switch",
+    "interfaces": [
+      "App",
+      "本地代理"
+    ],
+    "platforms": "macOS / Windows / Linux",
+    "description": "集中管理 Claude Code、Codex、OpenCode、DSH 等工具的供应商和配置。",
+    "note": "适合多个 Agent 共用模型服务的工作流；按上游说明处理配置备份与切换。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/farion1231/cc-switch/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "CLIProxyAPI",
+    "category": "tooling",
+    "repository": "router-for-me/CLIProxyAPI",
+    "github": "https://github.com/router-for-me/CLIProxyAPI",
+    "interfaces": [
+      "HTTP API",
+      "代理服务"
+    ],
+    "platforms": "本地 / 服务器",
+    "description": "为支持的模型与 CLI 后端提供兼容 API，连接不同协议的 Agent 客户端。",
+    "note": "属于接入与协议适配层；各提供商的支持方式和授权要求见上游。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/router-for-me/CLIProxyAPI/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "cmux",
+    "category": "tooling",
+    "repository": "manaflow-ai/cmux",
+    "github": "https://github.com/manaflow-ai/cmux",
+    "interfaces": [
+      "App",
+      "CLI",
+      "Socket API"
+    ],
+    "platforms": "macOS",
+    "description": "面向编码 Agent 的终端工作台，组合多会话、通知、可编程浏览器和 SSH 工作区。",
+    "note": "基于 Ghostty；适合管理本地与远端任务。",
+    "status": "项目",
+    "license": "见上游 LICENSE 与组件许可",
+    "sources": [
+      "https://github.com/manaflow-ai/cmux/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Paradev（原 Superset）",
+    "category": "tooling",
+    "repository": "ParadevAI/Paradev",
+    "github": "https://github.com/ParadevAI/Paradev",
+    "interfaces": [
+      "App",
+      "CLI"
+    ],
+    "platforms": "macOS；Linux 实验版",
+    "description": "在独立 Git worktree 中并行运行 CLI Agent，集中管理终端、代码审查和浏览器预览。",
+    "note": "远程主机和自动化等功能按套餐开放；当前规范仓库为 ParadevAI/Paradev。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/ParadevAI/Paradev/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Claude-Mem",
+    "category": "tooling",
+    "repository": "thedotmack/claude-mem",
+    "github": "https://github.com/thedotmack/claude-mem",
+    "interfaces": [
+      "插件",
+      "CLI",
+      "MCP"
+    ],
+    "platforms": "支持的 Agent 宿主",
+    "description": "记录、压缩和检索会话中的工作信息，为后续任务提供持久上下文。",
+    "note": "不同 Agent 的采集与检索支持不同；部分接入仅提供记忆搜索。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/thedotmack/claude-mem/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Superpowers",
+    "category": "tooling",
+    "repository": "obra/superpowers",
+    "github": "https://github.com/obra/superpowers",
+    "interfaces": [
+      "Skills",
+      "插件"
+    ],
+    "platforms": "多种编码 Agent",
+    "description": "把需求澄清、计划、实现与验证组织为可组合的 Agent 工作方法和技能。",
+    "note": "属于任务方法与技能层；执行工具仍由宿主 Agent 提供。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/obra/superpowers/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Worktrunk",
+    "category": "tooling",
+    "repository": "max-sixty/worktrunk",
+    "github": "https://github.com/max-sixty/worktrunk",
+    "interfaces": [
+      "CLI",
+      "Hooks"
+    ],
+    "platforms": "Git 工作区",
+    "description": "简化 Git worktree 的创建、切换与清理，为并行 Agent 任务提供独立工作目录。",
+    "note": "适合代码任务隔离；worktree 不等同于系统级沙箱。",
+    "status": "项目",
+    "license": "见上游许可",
+    "sources": [
+      "https://github.com/max-sixty/worktrunk/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "GSD Core（Get Shit Done）",
+    "category": "tooling",
+    "repository": "open-gsd/gsd-core",
+    "github": "https://github.com/open-gsd/gsd-core",
+    "interfaces": [
+      "CLI",
+      "Skills",
+      "工作流"
+    ],
+    "platforms": "多种编码 Agent",
+    "description": "用需求、阶段计划与上下文管理组织较长的编码任务。",
+    "note": "旧仓库 gsd-build/get-shit-done 已归档；此处 Star 统计来自当前仓库。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/open-gsd/gsd-core/blob/next/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Hermes Agent",
+    "category": "harness",
+    "repository": "NousResearch/hermes-agent",
+    "github": "https://github.com/NousResearch/hermes-agent",
+    "interfaces": [
+      "CLI",
+      "Gateway",
+      "Skills"
+    ],
+    "platforms": "本地 / SSH / 容器 / 云端",
+    "description": "结合记忆、技能、聊天渠道与定时任务的通用 Agent，支持多种远端执行后端。",
+    "note": "电脑操作需对应工具；可在远端常驻，通过聊天渠道下达任务。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/NousResearch/hermes-agent/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "OpenHands / Agent Canvas",
+    "category": "harness",
+    "repository": "OpenHands/OpenHands",
+    "github": "https://github.com/OpenHands/OpenHands",
+    "interfaces": [
+      "Web UI",
+      "Agent",
+      "后端接口"
+    ],
+    "platforms": "本地 / 远端 / 云端",
+    "description": "自托管 Agent 工作台，连接编码 Agent、隔离执行后端和持续自动化任务。",
+    "note": "内置 Agent 与第三方 ACP Agent 的接入方式不同。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/OpenHands/OpenHands/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Goose",
+    "category": "harness",
+    "repository": "aaif-goose/goose",
+    "github": "https://github.com/aaif-goose/goose",
+    "interfaces": [
+      "App",
+      "CLI",
+      "API",
+      "MCP"
+    ],
+    "platforms": "macOS / Windows / Linux",
+    "description": "可扩展的通用 Agent，用于编码、研究、文件处理与工作流自动化。",
+    "note": "当前规范仓库为 aaif-goose/goose；工具能力由扩展提供。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/aaif-goose/goose/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Open Interpreter",
+    "category": "harness",
+    "repository": "openinterpreter/openinterpreter",
+    "github": "https://github.com/openinterpreter/openinterpreter",
+    "interfaces": [
+      "CLI",
+      "ACP"
+    ],
+    "platforms": "macOS / Windows / Linux",
+    "description": "面向开放及低成本模型的编码 Agent，提供可切换的 Harness 行为。",
+    "note": "当前仓库为 openinterpreter/openinterpreter；不要沿用旧 Python 版能力描述。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/openinterpreter/openinterpreter/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Cline",
+    "category": "harness",
+    "repository": "cline/cline",
+    "github": "https://github.com/cline/cline",
+    "interfaces": [
+      "IDE",
+      "CLI",
+      "App",
+      "SDK"
+    ],
+    "platforms": "依入口；桌面与 CI",
+    "description": "组合文件、命令、浏览器和 MCP 工具的 Agent，支持无头脚本与应用集成。",
+    "note": "IDE 扩展、桌面应用、SDK 和 CLI 的运行要求分别查看。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/cline/cline/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "nanobot",
+    "category": "harness",
+    "repository": "HKUDS/nanobot",
+    "github": "https://github.com/HKUDS/nanobot",
+    "interfaces": [
+      "Python",
+      "CLI",
+      "Web UI",
+      "Gateway"
+    ],
+    "platforms": "本地 / 自托管服务器",
+    "description": "轻量个人 Agent，通过聊天渠道操作文件、保存记忆并调度任务。",
+    "note": "适合个人远程助手；能力依赖模型与已配置工具。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/HKUDS/nanobot/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "RTK",
+    "category": "cli",
+    "repository": "rtk-ai/rtk",
+    "github": "https://github.com/rtk-ai/rtk",
+    "interfaces": [
+      "CLI",
+      "Hooks",
+      "代理"
+    ],
+    "platforms": "macOS / Windows / Linux",
+    "description": "过滤和压缩命令输出，让 Agent 更高效地读取构建、测试与仓库信息。",
+    "note": "完整版本、OSS 版本和 API 代理的许可及功能有区别。",
+    "status": "项目",
+    "license": "Apache-2.0 / BUSL-1.1，按版本与组件区分",
+    "sources": [
+      "https://github.com/rtk-ai/rtk/blob/develop/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Firecrawl",
+    "category": "browser",
+    "repository": "firecrawl/firecrawl",
+    "github": "https://github.com/firecrawl/firecrawl",
+    "interfaces": [
+      "API",
+      "SDK",
+      "MCP"
+    ],
+    "platforms": "Web；自托管或云端",
+    "description": "搜索、采集、解析和交互网页，为 Agent 提供 Markdown、JSON 与截图。",
+    "note": "规范仓库为 firecrawl/firecrawl；托管服务与自托管能力分开评估。",
+    "status": "项目",
+    "license": "AGPL-3.0",
+    "sources": [
+      "https://github.com/firecrawl/firecrawl/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "GitHub Agentic Workflows",
+    "category": "workflow",
+    "repository": "github/gh-aw",
+    "github": "https://github.com/github/gh-aw",
+    "interfaces": [
+      "gh 扩展",
+      "Markdown",
+      "Actions"
+    ],
+    "platforms": "GitHub Actions",
+    "description": "把带 YAML 配置的 Markdown 任务编译成 Agent 工作流，执行仓库维护与分析。",
+    "note": "模型执行、确定性 CI 和写入结果各有不同职责。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/github/gh-aw/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Happy",
+    "category": "remote",
+    "repository": "slopus/happy",
+    "github": "https://github.com/slopus/happy",
+    "interfaces": [
+      "App",
+      "Web",
+      "CLI",
+      "中继"
+    ],
+    "platforms": "手机 / 桌面 / 运行主机",
+    "description": "从手机或网页继续 Claude Code、Codex 等会话，查看任务进展并远程交互。",
+    "note": "原始 CLI 与新桌面 Harness 的能力不同；桌面应用有独立仓库。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/slopus/happy/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "HAPI",
+    "category": "remote",
+    "repository": "tiann/hapi",
+    "github": "https://github.com/tiann/hapi",
+    "interfaces": [
+      "CLI",
+      "Hub",
+      "App",
+      "Web"
+    ],
+    "platforms": "手机 / 桌面 / 运行主机",
+    "description": "将本机 Agent 会话连接到手机、PWA 和 Telegram Mini App，支持远程接管与审批。",
+    "note": "Web / PWA 与原生客户端的分发和收费方式不同。",
+    "status": "项目",
+    "license": "AGPL-3.0",
+    "sources": [
+      "https://github.com/tiann/hapi/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "cc-connect",
+    "category": "remote",
+    "repository": "chenhg5/cc-connect",
+    "github": "https://github.com/chenhg5/cc-connect",
+    "interfaces": [
+      "CLI",
+      "消息机器人"
+    ],
+    "platforms": "飞书 / 钉钉 / Telegram 等",
+    "description": "把本地编码 Agent 接入即时通信渠道，从聊天窗口发任务、查看输出和继续工作。",
+    "note": "按具体 Agent 与渠道支持表配置；多数渠道无需公网入站端口。",
+    "status": "项目",
+    "license": "见上游许可",
+    "sources": [
+      "https://github.com/chenhg5/cc-connect/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Tailscale",
+    "category": "remote",
+    "repository": "tailscale/tailscale",
+    "github": "https://github.com/tailscale/tailscale",
+    "interfaces": [
+      "CLI",
+      "私有网络"
+    ],
+    "platforms": "多平台",
+    "description": "连接手机、个人电脑与服务器，为远程 Agent、SSH 和桌面工具提供网络通路。",
+    "note": "负责设备连通与访问控制；GUI 控制仍需相应驱动或远程桌面工具。",
+    "status": "基础工具",
+    "license": "BSD-3-Clause",
+    "sources": [
+      "https://github.com/tailscale/tailscale/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "OpenSSH Portable",
+    "category": "remote",
+    "repository": "openssh/openssh-portable",
+    "github": "https://github.com/openssh/openssh-portable",
+    "interfaces": [
+      "SSH",
+      "SCP",
+      "SFTP"
+    ],
+    "platforms": "Unix / Linux / macOS 等",
+    "description": "在远端执行 CLI、传输任务文件和建立隧道，是服务器自动化的基础入口。",
+    "note": "此仓库为 Portable 实现；Windows 平台安装与版本另看其发行说明。",
+    "status": "基础工具",
+    "license": "见上游许可",
+    "sources": [
+      "https://github.com/openssh/openssh-portable/blob/master/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "tmux",
+    "category": "remote",
+    "repository": "tmux/tmux",
+    "github": "https://github.com/tmux/tmux",
+    "interfaces": [
+      "CLI",
+      "终端会话"
+    ],
+    "platforms": "Linux / macOS / BSD 等",
+    "description": "让远端终端会话在断开 SSH 后继续运行，支持重新连接和查看任务输出。",
+    "note": "不提供网络或模型服务；常与 SSH 和 Agent CLI 组合。",
+    "status": "基础工具",
+    "license": "ISC",
+    "sources": [
+      "https://github.com/tmux/tmux/blob/master/.github/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "RustDesk",
+    "category": "remote",
+    "repository": "rustdesk/rustdesk",
+    "github": "https://github.com/rustdesk/rustdesk",
+    "interfaces": [
+      "远程桌面",
+      "客户端"
+    ],
+    "platforms": "多平台",
+    "description": "远程查看和接管电脑桌面，适合安装、登录、排障与人工接管自动化任务。",
+    "note": "远程桌面不是 AI 规划器；自动操作仍需 Agent 与执行工具。",
+    "status": "项目",
+    "license": "AGPL-3.0",
+    "sources": [
+      "https://github.com/rustdesk/rustdesk/blob/master/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "MeshCentral",
+    "category": "remote",
+    "repository": "Ylianst/MeshCentral",
+    "github": "https://github.com/Ylianst/MeshCentral",
+    "interfaces": [
+      "Web",
+      "设备 Agent"
+    ],
+    "platforms": "多设备",
+    "description": "自托管设备管理平台，集中提供远程桌面、终端和文件管理。",
+    "note": "适合多机器接入与维护；需要部署服务并安装设备端。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/Ylianst/MeshCentral/blob/master/readme.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Apache Guacamole",
+    "category": "remote",
+    "repository": "apache/guacamole-server",
+    "github": "https://github.com/apache/guacamole-server",
+    "interfaces": [
+      "Web 网关",
+      "RDP",
+      "VNC",
+      "SSH"
+    ],
+    "platforms": "浏览器到远程主机",
+    "description": "通过浏览器访问远端桌面和终端，为远程自动化提供观察与接管入口。",
+    "note": "该仓库为 guacd 服务端；Web 应用位于 guacamole-client。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/apache/guacamole-server/blob/main/README"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "frp",
+    "category": "remote",
+    "repository": "fatedier/frp",
+    "github": "https://github.com/fatedier/frp",
+    "interfaces": [
+      "CLI",
+      "反向代理"
+    ],
+    "platforms": "多平台",
+    "description": "为 NAT 后的 SSH、Web 或其他服务建立转发通路。",
+    "note": "是网络连接组件；服务本身仍需身份验证与访问控制。",
+    "status": "基础工具",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/fatedier/frp/blob/dev/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Ansible",
+    "category": "remote",
+    "repository": "ansible/ansible",
+    "github": "https://github.com/ansible/ansible",
+    "interfaces": [
+      "CLI",
+      "YAML",
+      "SSH"
+    ],
+    "platforms": "服务器 / 网络设备",
+    "description": "将远端安装、配置、部署和巡检固化成可重复的自动化任务。",
+    "note": "适合多机器确定性操作；不是 GUI 驱动。",
+    "status": "基础工具",
+    "license": "GPL-3.0",
+    "sources": [
+      "https://github.com/ansible/ansible/blob/devel/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Browserless",
+    "category": "sandbox",
+    "repository": "browserless/browserless",
+    "github": "https://github.com/browserless/browserless",
+    "interfaces": [
+      "WebSocket",
+      "HTTP API",
+      "Docker"
+    ],
+    "platforms": "远端浏览器 / 云端",
+    "description": "托管或自建无头浏览器服务，让 Playwright、Puppeteer 和 Agent 远程连接执行网页任务。",
+    "note": "远程浏览器会话与本机登录态分离；部署与商业许可见上游。",
+    "status": "项目",
+    "license": "见上游非商业使用与商业许可条款",
+    "sources": [
+      "https://github.com/browserless/browserless/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
   }
 ]

@@ -1,6 +1,6 @@
 # 按任务选择自动化方案
 
-[返回清单](../README.md) · [官方资料](reading.md)
+[返回清单](../README.md) · [远程自动化方案](remote-automation.md) · [官方资料](reading.md)
 
 选择工具前，先确定要操作的对象、是否需要现有登录态，以及结果怎样验证。以下是本清单的选型建议，不是统一性能排名。
 
@@ -37,6 +37,12 @@ Codex、Claude Code、DSH 等 Harness 管理任务与工具调用；Agent Deskto
 这些路线可以混合：例如先用 `gh` 下载 Issue 数据，再用浏览器复现问题，最后用脚本生成报告。后台输入能力也不意味着所有对话框和应用都能在后台完成。
 
 ## 几种常用组合
+
+### 统一模型与管理多会话
+
+[喜鹊 Magpie](https://github.com/yetone/magpie) 和 [CC Switch](https://github.com/farion1231/cc-switch) 适合集中管理多个 Agent 的模型与配置；[cmux](https://github.com/manaflow-ai/cmux) 与 [Paradev](https://github.com/ParadevAI/Paradev) 适合管理终端、通知、任务和独立工作区。它们处在执行驱动之上的配套层，可以与浏览器或电脑操作工具组合。
+
+跨设备使用请看 [远程自动化方案](remote-automation.md)：先确定 Agent 跑在哪台主机，再选择手机入口、SSH、网络通道和桌面驱动。
 
 ### 已登录网站的日常工作
 

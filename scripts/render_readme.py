@@ -3,7 +3,7 @@
 
 import argparse
 from collections import Counter
-from datetime import date
+from datetime import date, datetime, timezone
 import json
 from pathlib import Path
 import re
@@ -14,9 +14,11 @@ CATEGORIES = {
     "desktop": ("桌面操作与 Computer Use", "给 Agent 观察和操作原生应用的能力，包括驱动、完整 Agent 与官方示例。"),
     "browser": ("浏览器与网页自动化", "从共享登录态的浏览器，到适合 Agent 调用的 CLI、MCP 和自动化 SDK。"),
     "harness": ("编码 Agent 与通用 Harness", "负责理解目标、规划步骤、调用工具与管理上下文；具体操作能力来自其工具和扩展。"),
+    "tooling": ("Agent 配套：模型、记忆与多会话", "喜鹊、CC Switch、cmux 等配套工具，覆盖模型切换、技能、记忆、终端与并行工作区。"),
     "dsh": ("DeepSeek 与 Claude Code 桥接", "区分官方电脑操作、委派 Claude Code、替换模型路线、迁移配置和复刻交互体验。"),
     "cli": ("适合 Agent 调用的 CLI", "直接操作服务、文件和结构化数据，减少对 GUI 的依赖。"),
     "sandbox": ("虚拟电脑与隔离环境", "给自动化任务提供独立桌面、浏览器或文件环境。运行环境本身不等于完整 Agent。"),
+    "remote": ("远程控制与自动化", "从手机指挥 Agent、连接远端主机、持久运行任务到远程桌面接管。具体组合见远程自动化方案。"),
     "mobile": ("手机与模拟器自动化", "覆盖 Android、iOS、真机、模拟器和可复用 UI 测试流程。"),
     "workflow": ("工作流与持续自动化", "把单次任务连接到 CI、事件、调度、重试和结果交付。"),
     "scripting": ("系统脚本与传统自动化", "让 Agent 调用已有的确定性脚本和系统能力。"),
@@ -63,7 +65,25 @@ def cell(value):
     return value.replace("|", "\\|")
 
 
+def load_stars(items):
+    snapshot = json.loads((ROOT / "data/github-stars.json").read_text(encoding="utf-8"))
+    updated = datetime.fromisoformat(snapshot["updated_at"].replace("Z", "+00:00"))
+    if updated.tzinfo is None:
+        raise ValueError("Star snapshot timestamp must include a timezone")
+    expected = {item["repository"] for item in items}
+    if set(snapshot["repositories"]) != expected:
+        raise ValueError("Star snapshot does not match catalog; run scripts/update_stars.py")
+    for repo, stats in snapshot["repositories"].items():
+        if type(stats["stars"]) is not int or stats["stars"] < 0:
+            raise ValueError(f"{repo}: invalid Star count")
+        if type(stats["archived"]) is not bool:
+            raise ValueError(f"{repo}: invalid archive state")
+    return snapshot, updated.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+
+
 def render(items):
+    snapshot, star_time = load_stars(items)
+    star_counts = {repo: stats["stars"] for repo, stats in snapshot["repositories"].items()}
     total = len(items)
     repos = len({item["repository"].lower() for item in items})
     latest = max(item["checked_at"] for item in items)
@@ -75,9 +95,11 @@ def render(items):
 
 A curated, Chinese-first collection of computer-use agents, browser automation, CLI tools, sandboxes, and practical resources.
 
-[选型指南](docs/guide.md) · [官方文档与博文](docs/reading.md) · [贡献项目](CONTRIBUTING.md) · [JSON 数据](data/projects.json)
+[选型指南](docs/guide.md) · [远程自动化方案](docs/remote-automation.md) · [官方文档与博文](docs/reading.md) · [贡献项目](CONTRIBUTING.md) · [JSON 数据](data/projects.json)
 
 收录 **{total} 个项目与组件 / {repos} 个 GitHub 仓库 / {len(CATEGORIES)} 个分类**。最近整理：**{latest}**。以 GitHub 上游仓库为主，补充必要的官方产品文档和技术文章。
+
+**GitHub Stars：{star_time} 获取的快照**。各分类按 Star 数降序排列；点击数字打开 GitHub Star 页面。同一仓库的组件共享仓库 Star 数，Star 反映关注度，不代表实测质量。[统计数据](data/github-stars.json)
 
 本清单覆盖 **Computer Use + Browser Use + CLI / API Automation**。每个条目说明用途、接口、平台和关键边界；优先选择能找到上游文档、安装入口和明确使用场景的项目。小型但有独特能力的新项目会单独标为“社区探索”或“早期项目”。
 
@@ -93,6 +115,10 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 | 用 Mac 做桌面自动化 | [Peekaboo](https://github.com/openclaw/Peekaboo) / [Open Computer Use](https://github.com/iFurySt/open-computer-use) | CLI / MCP 接入已有 Agent |
 | 给 Agent 一台独立虚拟 Mac | [Terminal Mac](https://github.com/govijr/terminal-mac) / [Cua](https://github.com/trycua/cua) | 独立桌面；注意客体首次设置与组件成熟度 |
 | 把代码或文件任务放进脚本 / CI | [Codex](https://github.com/openai/codex) / [Claude Code](https://github.com/anthropics/claude-code) | 非交互模式与可程序化工具调用 |
+| 集中管理 Agent 的模型与配置 | [喜鹊 Magpie](https://github.com/yetone/magpie) / [CC Switch](https://github.com/farion1231/cc-switch) | 模型接入、配置切换和工具资源管理 |
+| 管理多个 Agent 会话与工作区 | [cmux](https://github.com/manaflow-ai/cmux) / [Paradev](https://github.com/ParadevAI/Paradev) | 终端、通知、独立工作区与任务观察 |
+| 从手机或聊天软件远程下达任务 | [Happy](https://github.com/slopus/happy) / [HAPI](https://github.com/tiann/hapi) / [cc-connect](https://github.com/chenhg5/cc-connect) | 远程继续会话、查看结果与处理审批 |
+| 操作远端电脑或云环境 | [远程自动化方案](docs/remote-automation.md) | SSH、私有网络、远端驱动、云浏览器与人工接管的组合 |
 | 用 DeepSeek 操作电脑或组合 Claude Code | [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) / [桥接分类](#dsh) | 官方 provider 与不同桥接方式分开说明 |
 | 处理 GitHub、Google Workspace、云盘与文档 | [CLI 分类](#cli) | 直接使用结构化接口，便于批量处理与验证 |
 | 操作手机或回归测试 App | [Mobile MCP](https://github.com/mobile-next/mobile-mcp) / [Maestro](https://github.com/mobile-dev-inc/Maestro) | 连接设备、操作界面、验证结果 |
@@ -106,13 +132,13 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
     parts.append("- [官方产品与阅读入口](#official-resources)\n- [如何贡献](#contributing)\n")
     for slug, (title, description) in CATEGORIES.items():
         parts.append(f'\n<a id="{slug}"></a>\n\n## {title}\n\n{description}\n\n')
-        parts.append("| 项目 | 接口 / 平台 | 适用场景 | 状态与边界 |\n| --- | --- | --- | --- |\n")
-        for item in items:
-            if item["category"] != slug:
-                continue
+        parts.append("| 项目 | Stars | 接口 / 平台 | 适用场景 | 状态与边界 |\n| --- | ---: | --- | --- | --- |\n")
+        members = sorted((i for i in items if i["category"] == slug), key=lambda i: (-star_counts[i["repository"]], i["name"].casefold()))
+        for item in members:
             interface = "、".join(item["interfaces"]) + "；" + item["platforms"]
             status = ("**" + item["status"] + "** · ") if item["status"] != "项目" else ""
-            parts.append(f"| [{cell(item['name'])}]({item['github']}) | {cell(interface)} | {cell(item['description'])} | {cell(status + item['note'])} |\n")
+            stars = f"[{star_counts[item['repository']]:,}](https://github.com/{item['repository']}/stargazers)"
+            parts.append(f"| [{cell(item['name'])}]({item['github']}) | {stars} | {cell(interface)} | {cell(item['description'])} | {cell(status + item['note'])} |\n")
     parts.append("""
 <a id="official-resources"></a>
 
@@ -131,8 +157,10 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 | [DeepSeek Computer Use 文档](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/subsystems/computer-use.md) | 官方实现、provider、权限与执行边界 |
 | [OpenAI API Computer Use](https://developers.openai.com/api/docs/guides/tools-computer-use) | 自己实现观察、动作执行和结果回传的 API 接入方式 |
 | [Antigravity CLI（agy）](https://antigravity.google/product/antigravity-cli) | Google 的终端 Agent 产品，支持 Skills、Hooks、MCP 与子 Agent；与 Gemini API CLI 区分 |
+| [Codex Remote Connections](https://learn.chatgpt.com/docs/remote-connections) | 从手机继续主机任务，或让桌面应用通过 SSH 使用远端项目 |
+| [Claude Code Remote Control](https://code.claude.com/docs/en/remote-control) | 从手机或浏览器继续本机运行的 Claude Code 会话 |
 
-进一步阅读：[官方文档与博文](docs/reading.md)。实际搭配：[选型指南](docs/guide.md)。
+进一步阅读：[官方文档与博文](docs/reading.md)。实际搭配：[选型指南](docs/guide.md) · [远程自动化方案](docs/remote-automation.md)。
 
 <a id="contributing"></a>
 
@@ -143,11 +171,12 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 修改 `data/projects.json` 后运行：
 
 ```bash
+python3 scripts/update_stars.py
 python3 scripts/render_readme.py
 python3 scripts/render_readme.py --check
 ```
 
-详细规则见 [CONTRIBUTING.md](CONTRIBUTING.md)。本项目不按 Star 数自动收录，也不把未经实测的条目标为实测推荐。
+`update_stars.py` 使用已登录的 GitHub CLI 获取全部仓库的当前 Star 数；获取失败时保留旧快照。详细规则见 [CONTRIBUTING.md](CONTRIBUTING.md)。本项目不按 Star 数自动收录，也不把未经实测的条目标为实测推荐。
 
 相关清单：[Awesome MCP ZH](https://github.com/yzfly/Awesome-MCP-ZH) · [Awesome DSH Skills](https://github.com/yzfly/awesome-dsh-skills)。
 
@@ -172,7 +201,7 @@ def main():
         else:
             target.write_text(result, encoding="utf-8")
         print(f"OK: {len(items)} entries, {len({i['repository'].lower() for i in items})} repositories")
-    except (ValueError, OSError) as exc:
+    except (ValueError, OSError, KeyError, TypeError) as exc:
         print(f"Error: {exc}", file=sys.stderr)
         return 1
     return 0
