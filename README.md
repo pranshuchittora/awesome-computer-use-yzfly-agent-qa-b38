@@ -7,7 +7,7 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 
 [选型指南](docs/guide.md) · [远程自动化方案](docs/remote-automation.md) · [官方文档与博文](docs/reading.md) · [贡献项目](CONTRIBUTING.md) · [JSON 数据](data/projects.json)
 
-收录 **105 个项目与组件 / 102 个 GitHub 仓库 / 12 个分类**。最近整理：**2026-11-06**。以 GitHub 上游仓库为主，补充必要的官方产品文档和技术文章。
+收录 **106 个项目与组件 / 103 个 GitHub 仓库 / 12 个分类**。最近整理：**2026-11-07**。以 GitHub 上游仓库为主，补充必要的官方产品文档和技术文章。
 
 **GitHub Stars 使用 [Shields.io 动态徽章](https://shields.io/badges/git-hub-repo-stars)**，点击徽章查看仓库 Star 页面；数值自动更新，可能有缓存延迟。各分类按最近整理时的 Star 数据排序，顺序不随徽章自动变化。同一仓库的组件共享仓库 Star 数，Star 反映关注度，不代表实测质量。
 
@@ -43,7 +43,7 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 - [适合 Agent 调用的 CLI](#cli)（12）
 - [虚拟电脑与隔离环境](#sandbox)（8）
 - [远程控制与自动化](#remote)（11）
-- [手机与模拟器自动化](#mobile)（6）
+- [手机与模拟器自动化](#mobile)（7）
 - [工作流与持续自动化](#workflow)（6）
 - [系统脚本与传统自动化](#scripting)（3）
 - [评测与研究环境](#benchmark)（2）
@@ -223,6 +223,7 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 | [Maestro](https://github.com/mobile-dev-inc/Maestro) | [![GitHub Stars](https://img.shields.io/github/stars/mobile-dev-inc/Maestro?style=social)](https://github.com/mobile-dev-inc/Maestro/stargazers) | CLI、YAML、MCP；移动应用 / Web | 用可读流程描述 UI 操作与断言，适合把 Agent 探索结果固化为测试。 | **基础工具** · 支持模拟器及 Android 真机；当前上游说明尚不支持 iOS 真机。 |
 | [Mobile MCP](https://github.com/mobile-next/mobile-mcp) | [![GitHub Stars](https://img.shields.io/github/stars/mobile-next/mobile-mcp?style=social)](https://github.com/mobile-next/mobile-mcp/stargazers) | MCP；Android / iOS | 连接真机、模拟器与云设备，通过界面快照或截图驱动移动应用。 | 不同设备路径有不同依赖；不是所有设备都零配置。 |
 | [uiautomator2](https://github.com/openatx/uiautomator2) | [![GitHub Stars](https://img.shields.io/github/stars/openatx/uiautomator2?style=social)](https://github.com/openatx/uiautomator2/stargazers) | Python、CLI；Android | 利用 Android UIAutomator 定位元素、操作设备和读取界面层级。 | **基础工具** · 适合 Android 原生 UI 自动化；需要可连接的设备。 |
+| [agent-qa](https://github.com/vostride/agent-qa) | [![GitHub Stars](https://img.shields.io/github/stars/vostride/agent-qa?style=social)](https://github.com/vostride/agent-qa/stargazers) | CLI、Dashboard、MCP；Web、Android、iOS | 通过自然语言测试网页、Android 与 iOS，结合 memidex 持久记忆、自我改进及逐步截图证据。 | [官网](https://vostride.com)；FSL-1.1-ALv2。模型 API 与设备环境需自行配置；记忆以可审阅文件保存，自我改进会验证运行经验。 |
 | [Terminal Phone](https://github.com/govijr/terminal-phone) | [![GitHub Stars](https://img.shields.io/github/stars/govijr/terminal-phone?style=social)](https://github.com/govijr/terminal-phone/stargazers) | CLI、MCP；Apple Silicon Mac；iOS | 在终端展示 iOS 模拟器或已配对 iPhone，让人和 Agent 共用设备操作接口。 | **早期项目** · 需要 Xcode；真机控制另有配对和授权要求。 |
 
 <a id="workflow"></a>

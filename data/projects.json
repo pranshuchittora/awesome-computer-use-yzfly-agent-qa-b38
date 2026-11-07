@@ -2143,5 +2143,28 @@
     ],
     "checked_at": "2026-11-06",
     "verification": "upstream-docs"
+  },
+  {
+    "name": "agent-qa",
+    "category": "mobile",
+    "repository": "vostride/agent-qa",
+    "github": "https://github.com/vostride/agent-qa",
+    "interfaces": [
+      "CLI",
+      "Dashboard",
+      "MCP"
+    ],
+    "platforms": "Web、Android、iOS",
+    "description": "通过自然语言测试网页、Android 与 iOS，结合 memidex 持久记忆、自我改进及逐步截图证据。",
+    "note": "[官网](https://vostride.com)；FSL-1.1-ALv2。模型 API 与设备环境需自行配置；记忆以可审阅文件保存，自我改进会验证运行经验。",
+    "status": "项目",
+    "license": "FSL-1.1-ALv2",
+    "sources": [
+      "https://vostride.com",
+      "https://github.com/vostride/agent-qa",
+      "https://github.com/vostride/agent-qa/blob/main/LICENSE.md"
+    ],
+    "checked_at": "2026-11-07",
+    "verification": "upstream-docs"
   }
 ]
