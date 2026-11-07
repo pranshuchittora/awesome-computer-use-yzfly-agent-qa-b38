@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh public GitHub Star counts using gh; write only after every fetch succeeds."""
+"""Refresh Star counts for category sorting; displayed badges update independently."""
 
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone

@@ -3,7 +3,7 @@
 
 import argparse
 from collections import Counter
-from datetime import date, datetime, timezone
+from datetime import date, datetime
 import json
 from pathlib import Path
 import re
@@ -78,11 +78,11 @@ def load_stars(items):
             raise ValueError(f"{repo}: invalid Star count")
         if type(stats["archived"]) is not bool:
             raise ValueError(f"{repo}: invalid archive state")
-    return snapshot, updated.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    return snapshot
 
 
 def render(items):
-    snapshot, star_time = load_stars(items)
+    snapshot = load_stars(items)
     star_counts = {repo: stats["stars"] for repo, stats in snapshot["repositories"].items()}
     total = len(items)
     repos = len({item["repository"].lower() for item in items})
@@ -99,7 +99,7 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 
 收录 **{total} 个项目与组件 / {repos} 个 GitHub 仓库 / {len(CATEGORIES)} 个分类**。最近整理：**{latest}**。以 GitHub 上游仓库为主，补充必要的官方产品文档和技术文章。
 
-**GitHub Stars：{star_time} 获取的快照**。各分类按 Star 数降序排列；点击数字打开 GitHub Star 页面。同一仓库的组件共享仓库 Star 数，Star 反映关注度，不代表实测质量。[统计数据](data/github-stars.json)
+**GitHub Stars 使用 [Shields.io 动态徽章](https://shields.io/badges/git-hub-repo-stars)**，点击徽章查看仓库 Star 页面；数值自动更新，可能有缓存延迟。各分类按最近整理时的 Star 数据排序，顺序不随徽章自动变化。同一仓库的组件共享仓库 Star 数，Star 反映关注度，不代表实测质量。
 
 本清单覆盖 **Computer Use + Browser Use + CLI / API Automation**。每个条目说明用途、接口、平台和关键边界；优先选择能找到上游文档、安装入口和明确使用场景的项目。小型但有独特能力的新项目会单独标为“社区探索”或“早期项目”。
 
@@ -137,7 +137,7 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
         for item in members:
             interface = "、".join(item["interfaces"]) + "；" + item["platforms"]
             status = ("**" + item["status"] + "** · ") if item["status"] != "项目" else ""
-            stars = f"[{star_counts[item['repository']]:,}](https://github.com/{item['repository']}/stargazers)"
+            stars = f"[![GitHub Stars](https://img.shields.io/github/stars/{item['repository']}?style=social)](https://github.com/{item['repository']}/stargazers)"
             parts.append(f"| [{cell(item['name'])}]({item['github']}) | {stars} | {cell(interface)} | {cell(item['description'])} | {cell(status + item['note'])} |\n")
     parts.append("""
 <a id="official-resources"></a>
@@ -176,7 +176,7 @@ python3 scripts/render_readme.py
 python3 scripts/render_readme.py --check
 ```
 
-`update_stars.py` 使用已登录的 GitHub CLI 获取全部仓库的当前 Star 数；获取失败时保留旧快照。详细规则见 [CONTRIBUTING.md](CONTRIBUTING.md)。本项目不按 Star 数自动收录，也不把未经实测的条目标为实测推荐。
+动态徽章的数值由 Shields.io 自动更新。`update_stars.py` 使用已登录的 GitHub CLI 更新分类排序参考数据；获取失败时保留旧数据。详细规则见 [CONTRIBUTING.md](CONTRIBUTING.md)。本项目不按 Star 数自动收录，也不把未经实测的条目标为实测推荐。
 
 相关清单：[Awesome MCP ZH](https://github.com/yzfly/Awesome-MCP-ZH) · [Awesome DSH Skills](https://github.com/yzfly/awesome-dsh-skills)。
 
