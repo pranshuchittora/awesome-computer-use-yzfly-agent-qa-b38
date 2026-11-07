@@ -1,0 +1,1523 @@
+[
+  {
+    "name": "Vercel Agent Desktop",
+    "category": "desktop",
+    "repository": "vercel-labs/agent-desktop",
+    "github": "https://github.com/vercel-labs/agent-desktop",
+    "interfaces": [
+      "CLI",
+      "MCP",
+      "C SDK"
+    ],
+    "platforms": "macOS / Windows / Linux",
+    "description": "通过系统辅助功能树读取桌面、返回元素引用并操作原生应用。",
+    "note": "不内置模型；后台操作范围取决于应用与平台。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/vercel-labs/agent-desktop/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Cua Driver",
+    "category": "desktop",
+    "repository": "trycua/cua",
+    "github": "https://github.com/trycua/cua/tree/main/libs/cua-driver",
+    "interfaces": [
+      "CLI",
+      "MCP",
+      "SDK"
+    ],
+    "platforms": "macOS / Windows / Linux",
+    "description": "为 Agent 提供原生应用、窗口、元素和输入控制接口。",
+    "note": "与 Cua Spaces 分开选型；后台输入有平台与应用限制。",
+    "status": "项目",
+    "license": "MIT（Driver 核心；可选组件另计）",
+    "sources": [
+      "https://github.com/trycua/cua/blob/main/README.md",
+      "https://github.com/trycua/cua/tree/main/libs/cua-driver"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Peekaboo",
+    "category": "desktop",
+    "repository": "openclaw/Peekaboo",
+    "github": "https://github.com/openclaw/Peekaboo",
+    "interfaces": [
+      "CLI",
+      "MCP",
+      "App"
+    ],
+    "platforms": "macOS",
+    "description": "结合截图、辅助功能检查和原生 UI 操作，适合 Mac 桌面自动化。",
+    "note": "当前发行版要求 macOS 15+；需相应系统权限。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/openclaw/Peekaboo/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Open Computer Use",
+    "category": "desktop",
+    "repository": "iFurySt/open-computer-use",
+    "github": "https://github.com/iFurySt/open-computer-use",
+    "interfaces": [
+      "CLI",
+      "MCP",
+      "Skill"
+    ],
+    "platforms": "macOS / Windows / Linux",
+    "description": "把桌面观察与操作封装为 MCP 服务，可接入 Codex、Claude Code 等。",
+    "note": "社区实现；平台支持细节和系统权限见上游。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/iFurySt/open-computer-use/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Windows-MCP",
+    "category": "desktop",
+    "repository": "CursorTouch/Windows-MCP",
+    "github": "https://github.com/CursorTouch/Windows-MCP",
+    "interfaces": [
+      "MCP"
+    ],
+    "platforms": "Windows",
+    "description": "通过 Windows UI 状态、键鼠和应用控制，让 Agent 操作本机桌面。",
+    "note": "视觉模型并非必需；当前 Python 与 Windows 版本要求见安装文档。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/CursorTouch/Windows-MCP/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "UI-TARS Desktop / Agent TARS",
+    "category": "desktop",
+    "repository": "bytedance/UI-TARS-desktop",
+    "github": "https://github.com/bytedance/UI-TARS-desktop",
+    "interfaces": [
+      "App",
+      "CLI",
+      "Web UI"
+    ],
+    "platforms": "桌面 / 浏览器",
+    "description": "字节跳动的多模态 Agent 项目，包含桌面操作应用与 Agent TARS 工具链。",
+    "note": "本地、远程和浏览器模式的要求不同；模型需要另行配置。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/bytedance/UI-TARS-desktop/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Agent S",
+    "category": "desktop",
+    "repository": "simular-ai/Agent-S",
+    "github": "https://github.com/simular-ai/Agent-S",
+    "interfaces": [
+      "Python",
+      "CLI"
+    ],
+    "platforms": "macOS / Windows / Linux",
+    "description": "Simular 的通用电脑操作 Agent 框架，结合任务规划与 GUI 操作。",
+    "note": "偏研发和实验；不同版本、模型与评测协议不能直接横比。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/simular-ai/Agent-S/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Microsoft UFO",
+    "category": "desktop",
+    "repository": "microsoft/UFO",
+    "github": "https://github.com/microsoft/UFO",
+    "interfaces": [
+      "Python",
+      "Agent"
+    ],
+    "platforms": "Windows；多设备扩展",
+    "description": "包含 Windows 桌面 AgentOS 与跨设备任务编排，结合 GUI 和应用 API。",
+    "note": "UFO² 与 UFO³ 的目标不同，应按单机或多设备场景选择。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/microsoft/UFO/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "OmniParser / OmniTool",
+    "category": "desktop",
+    "repository": "microsoft/OmniParser",
+    "github": "https://github.com/microsoft/OmniParser",
+    "interfaces": [
+      "Python",
+      "模型"
+    ],
+    "platforms": "截图解析；Windows VM 示例",
+    "description": "把界面截图解析为可交互区域，辅助视觉 Agent 定位控件。",
+    "note": "解析器本身不等于完整 Agent；模型权重与代码许可须分别查看。",
+    "status": "项目",
+    "license": "仓库 CC-BY-4.0；模型另见上游",
+    "sources": [
+      "https://github.com/microsoft/OmniParser/blob/master/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Claude Computer Use Demo",
+    "category": "desktop",
+    "repository": "anthropics/claude-quickstarts",
+    "github": "https://github.com/anthropics/claude-quickstarts/tree/main/computer-use-demo",
+    "interfaces": [
+      "Python",
+      "Docker"
+    ],
+    "platforms": "Linux 桌面容器",
+    "description": "Anthropic 官方参考实现，演示截图、动作执行、工具结果与模型循环。",
+    "note": "示例工程；需要模型 API 与运行环境。",
+    "status": "官方示例",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/anthropics/claude-quickstarts/tree/main/computer-use-demo"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Gemini Computer Use Preview",
+    "category": "desktop",
+    "repository": "google-gemini/computer-use-preview",
+    "github": "https://github.com/google-gemini/computer-use-preview",
+    "interfaces": [
+      "Python",
+      "CLI"
+    ],
+    "platforms": "浏览器",
+    "description": "Google 官方电脑操作示例，以 Playwright 等后端执行模型动作。",
+    "note": "预览示例；主要展示浏览器任务，不能据此推断任意桌面应用支持。",
+    "status": "官方示例",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/google-gemini/computer-use-preview/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Ego Lite / ego-browser",
+    "category": "browser",
+    "repository": "citrolabs/ego-lite",
+    "github": "https://github.com/citrolabs/ego-lite",
+    "interfaces": [
+      "Skill",
+      "JavaScript",
+      "CLI"
+    ],
+    "platforms": "macOS / Windows",
+    "description": "面向人与 Agent 协作的浏览器；在独立 Space 中使用页面快照、点击与填表。",
+    "note": "使用 Ego Lite 中的登录状态；公开仓库的许可不代表全部浏览器发行组件。",
+    "status": "项目",
+    "license": "MIT（公开仓库；发行版见上游）",
+    "sources": [
+      "https://github.com/citrolabs/ego-lite/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Vercel Agent Browser",
+    "category": "browser",
+    "repository": "vercel-labs/agent-browser",
+    "github": "https://github.com/vercel-labs/agent-browser",
+    "interfaces": [
+      "CLI",
+      "Skill"
+    ],
+    "platforms": "macOS / Windows / Linux",
+    "description": "把网页快照和元素引用交给 Agent，通过短命令完成导航与交互。",
+    "note": "页面变化后需要重新观察；与 Agent Desktop 是不同项目。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/vercel-labs/agent-browser/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Playwright CLI",
+    "category": "browser",
+    "repository": "microsoft/playwright-cli",
+    "github": "https://github.com/microsoft/playwright-cli",
+    "interfaces": [
+      "CLI",
+      "Skill"
+    ],
+    "platforms": "macOS / Windows / Linux",
+    "description": "为编码 Agent 提供 Playwright 命令接口，支持页面操作、截图和会话。",
+    "note": "适合已有 shell 能力的 Agent；与 Playwright MCP 分开使用。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/microsoft/playwright-cli/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Playwright MCP",
+    "category": "browser",
+    "repository": "microsoft/playwright-mcp",
+    "github": "https://github.com/microsoft/playwright-mcp",
+    "interfaces": [
+      "MCP"
+    ],
+    "platforms": "macOS / Windows / Linux",
+    "description": "Microsoft 的 Playwright MCP 服务，提供结构化页面观察和浏览器操作。",
+    "note": "适合通过 MCP 接入；仍需准备浏览器运行环境。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/microsoft/playwright-mcp/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Chrome DevTools for Agents",
+    "category": "browser",
+    "repository": "ChromeDevTools/chrome-devtools-mcp",
+    "github": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "interfaces": [
+      "MCP",
+      "CLI"
+    ],
+    "platforms": "Chrome",
+    "description": "让 Agent 检查网页、网络、控制台和性能，同时执行页面自动化。",
+    "note": "更适合网页调试和验收；不负责操作所有桌面应用。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Browser Use",
+    "category": "browser",
+    "repository": "browser-use/browser-use",
+    "github": "https://github.com/browser-use/browser-use",
+    "interfaces": [
+      "Python",
+      "TypeScript",
+      "CLI"
+    ],
+    "platforms": "浏览器；本地或云端",
+    "description": "把模型与浏览器操作结合，构建网页任务 Agent；提供本地库与云端服务。",
+    "note": "开源代码与托管浏览器、托管 Agent 服务分开看。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/browser-use/browser-use/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Stagehand",
+    "category": "browser",
+    "repository": "browserbase/stagehand",
+    "github": "https://github.com/browserbase/stagehand",
+    "interfaces": [
+      "SDK"
+    ],
+    "platforms": "浏览器；本地或云端",
+    "description": "用 act、observe、extract 等接口组织网页操作和结构化信息提取。",
+    "note": "适合将 AI 动作嵌入代码；需配置模型与浏览器。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/browserbase/stagehand/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Midscene.js",
+    "category": "browser",
+    "repository": "web-infra-dev/midscene",
+    "github": "https://github.com/web-infra-dev/midscene",
+    "interfaces": [
+      "JavaScript",
+      "YAML",
+      "CLI"
+    ],
+    "platforms": "Web / Android / iOS / 桌面",
+    "description": "用自然语言描述界面操作和断言，执行视觉驱动的端到端测试。",
+    "note": "不同目标需要对应适配器与运行环境。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/web-infra-dev/midscene/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Page Agent",
+    "category": "browser",
+    "repository": "alibaba/page-agent",
+    "github": "https://github.com/alibaba/page-agent",
+    "interfaces": [
+      "JavaScript",
+      "浏览器扩展"
+    ],
+    "platforms": "网页内部",
+    "description": "在网页中嵌入自然语言 GUI Agent，适合给已有 Web 产品增加操作助手。",
+    "note": "网页内能力有明确边界；不等于全系统电脑操作。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/alibaba/page-agent/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Lightpanda",
+    "category": "browser",
+    "repository": "lightpanda-io/browser",
+    "github": "https://github.com/lightpanda-io/browser",
+    "interfaces": [
+      "CLI",
+      "CDP",
+      "MCP"
+    ],
+    "platforms": "Linux / macOS",
+    "description": "面向自动化的轻量无头浏览器，执行 DOM 与 JavaScript 网页任务。",
+    "note": "浏览器兼容性应按目标站点验证；不作为像素渲染验收工具。",
+    "status": "项目",
+    "license": "AGPL-3.0",
+    "sources": [
+      "https://github.com/lightpanda-io/browser/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "BrowserOS",
+    "category": "browser",
+    "repository": "browseros-ai/BrowserOS",
+    "github": "https://github.com/browseros-ai/BrowserOS",
+    "interfaces": [
+      "App",
+      "MCP"
+    ],
+    "platforms": "macOS / Windows / Linux",
+    "description": "给外部 Agent 使用的独立浏览器，支持导入登录状态、并行标签和操作回放。",
+    "note": "核验时主推 BrowserOS neo；需区分新旧产品文档。",
+    "status": "项目",
+    "license": "AGPL-3.0",
+    "sources": [
+      "https://github.com/browseros-ai/BrowserOS/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Skyvern",
+    "category": "browser",
+    "repository": "Skyvern-AI/skyvern",
+    "github": "https://github.com/Skyvern-AI/skyvern",
+    "interfaces": [
+      "SDK",
+      "API",
+      "Web UI"
+    ],
+    "platforms": "浏览器；自托管或云端",
+    "description": "结合视觉模型与浏览器操作，编排表单、后台系统等业务流程。",
+    "note": "自托管软件与商业托管服务分开评估。",
+    "status": "项目",
+    "license": "AGPL-3.0",
+    "sources": [
+      "https://github.com/Skyvern-AI/skyvern/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Nanobrowser",
+    "category": "browser",
+    "repository": "nanobrowser/nanobrowser",
+    "github": "https://github.com/nanobrowser/nanobrowser",
+    "interfaces": [
+      "浏览器扩展"
+    ],
+    "platforms": "Chrome",
+    "description": "在现有浏览器中用侧栏 Agent 执行网页任务，复用浏览器会话。",
+    "note": "需要配置支持的模型；操作范围与扩展权限相关。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/nanobrowser/nanobrowser/blob/master/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Playwright",
+    "category": "browser",
+    "repository": "microsoft/playwright",
+    "github": "https://github.com/microsoft/playwright",
+    "interfaces": [
+      "SDK",
+      "CLI"
+    ],
+    "platforms": "Chromium / Firefox / WebKit",
+    "description": "成熟的浏览器自动化底座，适合把已确认流程固化为可重复脚本。",
+    "note": "本身不负责自然语言规划。",
+    "status": "基础工具",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/microsoft/playwright/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Puppeteer",
+    "category": "browser",
+    "repository": "puppeteer/puppeteer",
+    "github": "https://github.com/puppeteer/puppeteer",
+    "interfaces": [
+      "JavaScript API"
+    ],
+    "platforms": "Chrome / Firefox",
+    "description": "通过程序控制浏览器，完成页面交互、截图、PDF 与采集任务。",
+    "note": "适合明确的脚本流程和自建 Agent 工具。",
+    "status": "基础工具",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/puppeteer/puppeteer/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Selenium",
+    "category": "browser",
+    "repository": "SeleniumHQ/selenium",
+    "github": "https://github.com/SeleniumHQ/selenium",
+    "interfaces": [
+      "WebDriver",
+      "SDK"
+    ],
+    "platforms": "多浏览器",
+    "description": "跨浏览器自动化生态，适合接入已有测试设施和远程浏览器集群。",
+    "note": "已有 WebDriver 流程可作为 Agent 的执行后端。",
+    "status": "基础工具",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/SeleniumHQ/selenium/blob/trunk/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Codex",
+    "category": "harness",
+    "repository": "openai/codex",
+    "github": "https://github.com/openai/codex",
+    "interfaces": [
+      "CLI",
+      "SDK",
+      "App Server"
+    ],
+    "platforms": "本地开发环境 / CI",
+    "description": "用 codex exec 执行非交互任务，把代码、文件与工具调用接入脚本流程。",
+    "note": "CLI、桌面 Computer Use 与定时任务是不同入口，详见选型指南。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/openai/codex/blob/main/README.md",
+      "https://learn.chatgpt.com/docs/non-interactive-mode",
+      "https://learn.chatgpt.com/docs/automations"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Claude Code",
+    "category": "harness",
+    "repository": "anthropics/claude-code",
+    "github": "https://github.com/anthropics/claude-code",
+    "interfaces": [
+      "CLI",
+      "Hooks",
+      "MCP"
+    ],
+    "platforms": "macOS / Windows / Linux",
+    "description": "通过 claude -p、Hooks 和 MCP 构建代码、文件与工具自动化。",
+    "note": "公开仓库用于文档、反馈与扩展；勿据此称产品本体为开源。",
+    "status": "项目",
+    "license": "产品使用条款；见上游 LICENSE.md",
+    "sources": [
+      "https://github.com/anthropics/claude-code/blob/main/README.md",
+      "https://github.com/anthropics/claude-code/blob/main/LICENSE.md",
+      "https://code.claude.com/docs/en/headless"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "DeepSeek Harness（DSH）",
+    "category": "harness",
+    "repository": "deepseek-ai/deepseek-harness",
+    "github": "https://github.com/deepseek-ai/deepseek-harness",
+    "interfaces": [
+      "CLI",
+      "Web UI",
+      "插件"
+    ],
+    "platforms": "本地；依插件平台支持",
+    "description": "DeepSeek 官方插件式 Agent 运行时，提供工具、会话、子 Agent 与可组合能力。",
+    "note": "电脑操作需选择并启用对应 provider；版本迭代可能有不兼容变更。",
+    "status": "开发者预览",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/deepseek-ai/deepseek-harness/blob/master/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Gemini CLI",
+    "category": "harness",
+    "repository": "google-gemini/gemini-cli",
+    "github": "https://github.com/google-gemini/gemini-cli",
+    "interfaces": [
+      "CLI",
+      "MCP",
+      "扩展"
+    ],
+    "platforms": "本地开发环境",
+    "description": "Google 维护的开源终端 Agent，当前主要面向企业 Code Assist 工作流。",
+    "note": "个人免费及 Google AI Pro / Ultra 入口已迁至 Antigravity CLI；付费 API 路径见上游。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/google-gemini/gemini-cli/blob/main/README.md",
+      "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "OpenCode",
+    "category": "harness",
+    "repository": "anomalyco/opencode",
+    "github": "https://github.com/anomalyco/opencode",
+    "interfaces": [
+      "CLI",
+      "SDK",
+      "服务端"
+    ],
+    "platforms": "本地开发环境",
+    "description": "支持多模型的编码 Agent，适合搭配自定义工具和服务接口。",
+    "note": "模型、权限及工具能力由具体配置决定。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/anomalyco/opencode/blob/dev/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Qwen Code",
+    "category": "harness",
+    "repository": "QwenLM/qwen-code",
+    "github": "https://github.com/QwenLM/qwen-code",
+    "interfaces": [
+      "CLI",
+      "MCP"
+    ],
+    "platforms": "本地开发环境",
+    "description": "Qwen 的开源终端编码 Agent，用于代码修改和工具驱动的任务流程。",
+    "note": "GUI 操作需要额外执行工具。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/QwenLM/qwen-code/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Pi",
+    "category": "harness",
+    "repository": "earendil-works/pi",
+    "github": "https://github.com/earendil-works/pi",
+    "interfaces": [
+      "CLI",
+      "JSON",
+      "RPC",
+      "SDK"
+    ],
+    "platforms": "macOS / Windows / Linux",
+    "description": "可扩展的轻量 Agent Harness，支持脚本模式、RPC、技能与扩展。",
+    "note": "使用当前仓库 earendil-works/pi；按所需能力自行组合扩展。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/earendil-works/pi/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Claude Agent SDK（Python）",
+    "category": "harness",
+    "repository": "anthropics/claude-agent-sdk-python",
+    "github": "https://github.com/anthropics/claude-agent-sdk-python",
+    "interfaces": [
+      "Python SDK"
+    ],
+    "platforms": "Python 环境",
+    "description": "把 Claude Code 的 Agent 循环和工具能力嵌入应用与自动化服务。",
+    "note": "SDK 许可与随附 Claude Code 运行时条款分开看。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/anthropics/claude-agent-sdk-python/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "OpenClaw",
+    "category": "harness",
+    "repository": "openclaw/openclaw",
+    "github": "https://github.com/openclaw/openclaw",
+    "interfaces": [
+      "Gateway",
+      "CLI",
+      "插件"
+    ],
+    "platforms": "多平台",
+    "description": "自托管个人助手，通过消息渠道、模型插件和工具连接持续工作流。",
+    "note": "电脑控制需要相应节点或驱动；不是单独一个鼠标点击库。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/openclaw/openclaw/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "DSH Computer Use",
+    "category": "dsh",
+    "repository": "deepseek-ai/deepseek-harness",
+    "github": "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/subsystems/computer-use.md",
+    "interfaces": [
+      "原生 provider",
+      "MCP provider"
+    ],
+    "platforms": "macOS 原生 CUA；其他依 provider",
+    "description": "官方桌面观察与操作能力，包含原生 CUA 和 Cua Driver 集成。",
+    "note": "实验性、显式启用；同一 composition 仅注册一个 provider。",
+    "status": "官方实验性",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/subsystems/computer-use.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "DSH Claude Code Subagent",
+    "category": "dsh",
+    "repository": "deepseek-ai/deepseek-harness",
+    "github": "https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/subagent/subagent-claude-code",
+    "interfaces": [
+      "DSH 插件"
+    ],
+    "platforms": "依 Claude Code 运行环境",
+    "description": "DSH 官方插件，把自包含任务委派给原生 Claude Code 会话。",
+    "note": "返回最终答案或失败诊断；不是把完整交互过程透明搬进 DSH。",
+    "status": "官方组件",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/deepseek-ai/deepseek-harness/blob/master/packages/subagent/subagent-claude-code/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "DSH Claude Plugin",
+    "category": "dsh",
+    "repository": "snowan/dsh-claude-plugin",
+    "github": "https://github.com/snowan/dsh-claude-plugin",
+    "interfaces": [
+      "DSH provider",
+      "Agent SDK"
+    ],
+    "platforms": "Node.js；需 Claude Code 认证",
+    "description": "把 Claude Code 接成 DSH 的模型路线，同时由 DSH 管理工具执行与会话。",
+    "note": "社区早期实现；锁定的 SDK / DSH 版本及兼容性需逐项核对。",
+    "status": "社区探索",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/snowan/dsh-claude-plugin/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "DSH Bridges",
+    "category": "dsh",
+    "repository": "yhlooo/dsh-bridges",
+    "github": "https://github.com/yhlooo/dsh-bridges",
+    "interfaces": [
+      "DSH 插件"
+    ],
+    "platforms": "依所桥接 Harness",
+    "description": "将 Claude Code、Codex 等已有配置与部分技能接入 DSH。",
+    "note": "迁移配置与调用另一个 Agent 是不同能力；兼容范围见文档。",
+    "status": "社区扩展",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/yhlooo/dsh-bridges/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "DSH-CC",
+    "category": "dsh",
+    "repository": "dsh-cc/dsh-cc",
+    "github": "https://github.com/dsh-cc/dsh-cc",
+    "interfaces": [
+      "CLI",
+      "DSH 插件"
+    ],
+    "platforms": "依 DSH 环境",
+    "description": "在 DSH 上组合 Claude Code 风格的 TUI、技能、Hooks 和工作流。",
+    "note": "上游明确说明它不是 Claude Code，也不是 Claude Code 包装器。",
+    "status": "社区探索",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/dsh-cc/dsh-cc/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Google Workspace CLI（gws）",
+    "category": "cli",
+    "repository": "googleworkspace/cli",
+    "github": "https://github.com/googleworkspace/cli",
+    "interfaces": [
+      "CLI",
+      "JSON",
+      "Skills"
+    ],
+    "platforms": "Google Workspace API",
+    "description": "以结构化命令操作 Drive、Gmail、Calendar、Docs、Sheets 等服务。",
+    "note": "仓库归属 googleworkspace，但 README 明确写明非官方支持产品。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/googleworkspace/cli/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "gogcli（gog）",
+    "category": "cli",
+    "repository": "openclaw/gogcli",
+    "github": "https://github.com/openclaw/gogcli",
+    "interfaces": [
+      "CLI",
+      "JSON"
+    ],
+    "platforms": "Google Workspace API",
+    "description": "面向脚本与 Agent 的 Workspace 客户端，支持账号路由与机器可读输出。",
+    "note": "社区工具；当前规范仓库为 openclaw/gogcli。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/openclaw/gogcli/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "GitHub CLI（gh）",
+    "category": "cli",
+    "repository": "cli/cli",
+    "github": "https://github.com/cli/cli",
+    "interfaces": [
+      "CLI",
+      "JSON",
+      "API"
+    ],
+    "platforms": "GitHub",
+    "description": "官方 CLI，用于仓库、Issue、PR、Actions 和 GitHub API 自动化。",
+    "note": "比通过网页逐个点击更适合明确的 GitHub 工作流。",
+    "status": "基础工具",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/cli/cli/blob/trunk/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "MCPorter",
+    "category": "cli",
+    "repository": "openclaw/mcporter",
+    "github": "https://github.com/openclaw/mcporter",
+    "interfaces": [
+      "CLI",
+      "TypeScript"
+    ],
+    "platforms": "MCP 工具",
+    "description": "从命令行发现、调用 MCP 工具，也可将工具封装成独立 CLI。",
+    "note": "它是 MCP 客户端与桥接层；不是另一个电脑操作驱动。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/openclaw/mcporter/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "MarkItDown",
+    "category": "cli",
+    "repository": "microsoft/markitdown",
+    "github": "https://github.com/microsoft/markitdown",
+    "interfaces": [
+      "CLI",
+      "Python"
+    ],
+    "platforms": "文档 / 多媒体文件",
+    "description": "将 PDF、Office 等内容转换为 Markdown，便于 Agent 阅读和分析。",
+    "note": "偏内容提取；不保证还原原始排版。",
+    "status": "基础工具",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/microsoft/markitdown/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "jq",
+    "category": "cli",
+    "repository": "jqlang/jq",
+    "github": "https://github.com/jqlang/jq",
+    "interfaces": [
+      "CLI",
+      "管道"
+    ],
+    "platforms": "JSON 数据",
+    "description": "筛选、转换和汇总结构化输出，连接 Agent 与各类 API / CLI。",
+    "note": "适合结果校验与数据整形，本身不含模型。",
+    "status": "基础工具",
+    "license": "见上游 COPYING 与依赖许可",
+    "sources": [
+      "https://github.com/jqlang/jq/blob/master/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "rclone",
+    "category": "cli",
+    "repository": "rclone/rclone",
+    "github": "https://github.com/rclone/rclone",
+    "interfaces": [
+      "CLI",
+      "API"
+    ],
+    "platforms": "云存储 / 本地文件",
+    "description": "在云盘、对象存储与本地之间复制、同步和校验文件。",
+    "note": "适合资料交付和备份流程；同步策略须明确。",
+    "status": "基础工具",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/rclone/rclone/blob/master/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Pandoc",
+    "category": "cli",
+    "repository": "jgm/pandoc",
+    "github": "https://github.com/jgm/pandoc",
+    "interfaces": [
+      "CLI"
+    ],
+    "platforms": "文档文件",
+    "description": "在 Markdown、HTML、DOCX 等格式之间转换，制作自动化文档产物。",
+    "note": "PDF 等输出可能需要额外排版引擎。",
+    "status": "基础工具",
+    "license": "GPL-2.0",
+    "sources": [
+      "https://github.com/jgm/pandoc/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "FFmpeg / ffprobe",
+    "category": "cli",
+    "repository": "FFmpeg/FFmpeg",
+    "github": "https://github.com/FFmpeg/FFmpeg",
+    "interfaces": [
+      "CLI",
+      "JSON"
+    ],
+    "platforms": "音视频文件",
+    "description": "批量转码、剪辑、抽帧，并通过 ffprobe 检查媒体信息。",
+    "note": "GitHub 是上游镜像；许可取决于构建所启用组件。",
+    "status": "基础工具",
+    "license": "LGPL / GPL 等，依构建配置",
+    "sources": [
+      "https://github.com/FFmpeg/FFmpeg/blob/master/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "yt-dlp",
+    "category": "cli",
+    "repository": "yt-dlp/yt-dlp",
+    "github": "https://github.com/yt-dlp/yt-dlp",
+    "interfaces": [
+      "CLI",
+      "JSON"
+    ],
+    "platforms": "音视频站点",
+    "description": "为有权处理的媒体任务提供下载、元信息提取与批处理入口。",
+    "note": "站点适配变化快；按上游更新并确认任务权限。",
+    "status": "基础工具",
+    "license": "Unlicense",
+    "sources": [
+      "https://github.com/yt-dlp/yt-dlp/blob/master/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Terminal Mac",
+    "category": "sandbox",
+    "repository": "govijr/terminal-mac",
+    "github": "https://github.com/govijr/terminal-mac",
+    "interfaces": [
+      "CLI",
+      "MCP",
+      "Skill"
+    ],
+    "platforms": "Apple Silicon；macOS 14+",
+    "description": "在终端查看、控制独立 macOS 虚拟机，给电脑操作 Agent 一个隔离桌面。",
+    "note": "客体需首次设置，不继承宿主应用和登录会话；上游仍待干净机器实时验收。",
+    "status": "早期候选版",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/govijr/terminal-mac/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Cua / Lume / Spaces",
+    "category": "sandbox",
+    "repository": "trycua/cua",
+    "github": "https://github.com/trycua/cua",
+    "interfaces": [
+      "CLI",
+      "SDK",
+      "App"
+    ],
+    "platforms": "依组件；macOS / Linux 等",
+    "description": "提供 Agent 桌面、虚拟机生命周期、沙箱和电脑操作基础设施。",
+    "note": "Driver、Lume 与 Spaces 的许可不同；按具体组件选择。",
+    "status": "项目",
+    "license": "MIT 与 FSL-1.1-MIT 等，按目录区分",
+    "sources": [
+      "https://github.com/trycua/cua/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "E2B Desktop Sandbox",
+    "category": "sandbox",
+    "repository": "e2b-dev/desktop",
+    "github": "https://github.com/e2b-dev/desktop",
+    "interfaces": [
+      "Python",
+      "JavaScript SDK"
+    ],
+    "platforms": "Linux 云桌面",
+    "description": "提供可编程隔离桌面、截图、键鼠和流式查看，用作 Agent 执行环境。",
+    "note": "此仓库保留模板和示例；Desktop SDK 已迁入 e2b-dev/E2B。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/e2b-dev/desktop/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Tart",
+    "category": "sandbox",
+    "repository": "openai/tart",
+    "github": "https://github.com/openai/tart",
+    "interfaces": [
+      "CLI"
+    ],
+    "platforms": "Apple Silicon；macOS / Linux VM",
+    "description": "构建、运行与管理虚拟机，适合可复现的 Mac 自动化环境。",
+    "note": "当前仓库已迁至 openai/tart；它提供 VM，不提供任务规划。",
+    "status": "项目",
+    "license": "见上游 LICENSE（非统一宽松许可）",
+    "sources": [
+      "https://github.com/openai/tart/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Windows in Docker",
+    "category": "sandbox",
+    "repository": "dockur/windows",
+    "github": "https://github.com/dockur/windows",
+    "interfaces": [
+      "Docker",
+      "Web",
+      "RDP"
+    ],
+    "platforms": "Linux 主机上的 Windows VM",
+    "description": "用容器入口管理 Windows 虚拟机，给桌面自动化准备测试环境。",
+    "note": "需要虚拟化支持；仓库许可不包含 Windows 客体授权。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/dockur/windows/blob/master/readme.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "AIO Sandbox",
+    "category": "sandbox",
+    "repository": "agent-infra/sandbox",
+    "github": "https://github.com/agent-infra/sandbox",
+    "interfaces": [
+      "HTTP API",
+      "MCP",
+      "Docker"
+    ],
+    "platforms": "Linux 容器",
+    "description": "把浏览器、终端、文件、VS Code 和 Jupyter 放入一个 Agent 环境。",
+    "note": "需配置访问认证；容器内服务和宿主权限应按实际任务设置。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/agent-infra/sandbox/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "AI SDK Computer Use Demo",
+    "category": "sandbox",
+    "repository": "vercel-labs/ai-sdk-computer-use",
+    "github": "https://github.com/vercel-labs/ai-sdk-computer-use",
+    "interfaces": [
+      "Next.js",
+      "AI SDK"
+    ],
+    "platforms": "Vercel Sandbox",
+    "description": "Vercel 官方演示，把模型工具调用、远程桌面与 VNC 展示连成应用。",
+    "note": "Demo 与 Agent Desktop 不同；需要模型与 Sandbox 服务配置。",
+    "status": "官方示例",
+    "license": "未从仓库元数据确认；使用前核对",
+    "sources": [
+      "https://github.com/vercel-labs/ai-sdk-computer-use/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Terminal Phone",
+    "category": "mobile",
+    "repository": "govijr/terminal-phone",
+    "github": "https://github.com/govijr/terminal-phone",
+    "interfaces": [
+      "CLI",
+      "MCP"
+    ],
+    "platforms": "Apple Silicon Mac；iOS",
+    "description": "在终端展示 iOS 模拟器或已配对 iPhone，让人和 Agent 共用设备操作接口。",
+    "note": "需要 Xcode；真机控制另有配对和授权要求。",
+    "status": "早期项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/govijr/terminal-phone/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Mobile MCP",
+    "category": "mobile",
+    "repository": "mobile-next/mobile-mcp",
+    "github": "https://github.com/mobile-next/mobile-mcp",
+    "interfaces": [
+      "MCP"
+    ],
+    "platforms": "Android / iOS",
+    "description": "连接真机、模拟器与云设备，通过界面快照或截图驱动移动应用。",
+    "note": "不同设备路径有不同依赖；不是所有设备都零配置。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/mobile-next/mobile-mcp/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Open-AutoGLM",
+    "category": "mobile",
+    "repository": "zai-org/Open-AutoGLM",
+    "github": "https://github.com/zai-org/Open-AutoGLM",
+    "interfaces": [
+      "Python",
+      "CLI",
+      "设备驱动"
+    ],
+    "platforms": "Android / HarmonyOS / iOS 路径",
+    "description": "智谱的手机 Agent 模型与框架，通过视觉理解和设备动作完成任务。",
+    "note": "各平台后端不同；模型权重与框架部署要求分别看上游。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/zai-org/Open-AutoGLM/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Appium",
+    "category": "mobile",
+    "repository": "appium/appium",
+    "github": "https://github.com/appium/appium",
+    "interfaces": [
+      "WebDriver",
+      "SDK"
+    ],
+    "platforms": "Android / iOS 等",
+    "description": "跨平台应用自动化底座，可让 Agent 生成或运行可复用的设备操作脚本。",
+    "note": "需要安装对应 driver；不是开箱即用的自然语言 Agent。",
+    "status": "基础工具",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/appium/appium/blob/master/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Maestro",
+    "category": "mobile",
+    "repository": "mobile-dev-inc/Maestro",
+    "github": "https://github.com/mobile-dev-inc/Maestro",
+    "interfaces": [
+      "CLI",
+      "YAML",
+      "MCP"
+    ],
+    "platforms": "移动应用 / Web",
+    "description": "用可读流程描述 UI 操作与断言，适合把 Agent 探索结果固化为测试。",
+    "note": "支持模拟器及 Android 真机；当前上游说明尚不支持 iOS 真机。",
+    "status": "基础工具",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/mobile-dev-inc/Maestro/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "uiautomator2",
+    "category": "mobile",
+    "repository": "openatx/uiautomator2",
+    "github": "https://github.com/openatx/uiautomator2",
+    "interfaces": [
+      "Python",
+      "CLI"
+    ],
+    "platforms": "Android",
+    "description": "利用 Android UIAutomator 定位元素、操作设备和读取界面层级。",
+    "note": "适合 Android 原生 UI 自动化；需要可连接的设备。",
+    "status": "基础工具",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/openatx/uiautomator2/blob/master/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Codex GitHub Action",
+    "category": "workflow",
+    "repository": "openai/codex-action",
+    "github": "https://github.com/openai/codex-action",
+    "interfaces": [
+      "GitHub Actions"
+    ],
+    "platforms": "CI",
+    "description": "将 Codex 任务接入 PR、Issue 或代码流水线。",
+    "note": "Action 需要配置模型认证及工作流权限；不是桌面定时任务。",
+    "status": "项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/openai/codex-action/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Claude Code Action",
+    "category": "workflow",
+    "repository": "anthropics/claude-code-action",
+    "github": "https://github.com/anthropics/claude-code-action",
+    "interfaces": [
+      "GitHub Actions"
+    ],
+    "platforms": "CI",
+    "description": "让 Claude Code 处理 Issue、PR 问答、代码变更和审查任务。",
+    "note": "按事件设置触发范围与工具权限。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/anthropics/claude-code-action/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "n8n",
+    "category": "workflow",
+    "repository": "n8n-io/n8n",
+    "github": "https://github.com/n8n-io/n8n",
+    "interfaces": [
+      "Web UI",
+      "API",
+      "工作流"
+    ],
+    "platforms": "自托管 / 云端",
+    "description": "通过连接器、代码节点和 AI 节点编排跨服务业务自动化。",
+    "note": "源码可见、fair-code；不要直接标为 OSI 开源软件。",
+    "status": "项目",
+    "license": "Sustainable Use License / 企业许可",
+    "sources": [
+      "https://github.com/n8n-io/n8n/blob/master/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Windmill",
+    "category": "workflow",
+    "repository": "windmill-labs/windmill",
+    "github": "https://github.com/windmill-labs/windmill",
+    "interfaces": [
+      "CLI",
+      "API",
+      "脚本"
+    ],
+    "platforms": "自托管 / 云端",
+    "description": "把 Python、TypeScript、Bash 等脚本发布为任务、API 和可编排工作流。",
+    "note": "社区发行二进制、源码构建和企业功能的许可有区别。",
+    "status": "项目",
+    "license": "AGPL 源码构建；发行版及企业条款另计",
+    "sources": [
+      "https://github.com/windmill-labs/windmill/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Prefect",
+    "category": "workflow",
+    "repository": "PrefectHQ/prefect",
+    "github": "https://github.com/PrefectHQ/prefect",
+    "interfaces": [
+      "Python",
+      "CLI",
+      "API"
+    ],
+    "platforms": "Python 工作流",
+    "description": "为批处理和 Agent 周边流程提供调度、重试、状态与可观测性。",
+    "note": "负责执行编排；电脑操作仍需另接工具。",
+    "status": "基础工具",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/PrefectHQ/prefect/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Hammerspoon",
+    "category": "scripting",
+    "repository": "Hammerspoon/hammerspoon",
+    "github": "https://github.com/Hammerspoon/hammerspoon",
+    "interfaces": [
+      "Lua",
+      "控制接口"
+    ],
+    "platforms": "macOS",
+    "description": "用 Lua 组合窗口、快捷键、应用与系统事件，构建可复用 Mac 自动化。",
+    "note": "适合明确的本地操作，不包含自然语言规划器。",
+    "status": "基础工具",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/Hammerspoon/hammerspoon/blob/master/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "AutoHotkey",
+    "category": "scripting",
+    "repository": "AutoHotkey/AutoHotkey",
+    "github": "https://github.com/AutoHotkey/AutoHotkey",
+    "interfaces": [
+      "脚本",
+      "CLI"
+    ],
+    "platforms": "Windows",
+    "description": "将键鼠、窗口与热键操作编写成脚本，作为 Agent 的确定性执行工具。",
+    "note": "应区分 v1 与 v2 语法。",
+    "status": "基础工具",
+    "license": "GPL-2.0",
+    "sources": [
+      "https://github.com/AutoHotkey/AutoHotkey/blob/alpha/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "PyAutoGUI",
+    "category": "scripting",
+    "repository": "asweigart/pyautogui",
+    "github": "https://github.com/asweigart/pyautogui",
+    "interfaces": [
+      "Python"
+    ],
+    "platforms": "macOS / Windows / Linux",
+    "description": "提供键鼠、截图和基础图像定位，用于自建 GUI 自动化工具。",
+    "note": "坐标与屏幕状态相关；运行环境支持须实际验证。",
+    "status": "基础工具",
+    "license": "BSD-3-Clause",
+    "sources": [
+      "https://github.com/asweigart/pyautogui/blob/master/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "OSWorld",
+    "category": "benchmark",
+    "repository": "xlang-ai/OSWorld",
+    "github": "https://github.com/xlang-ai/OSWorld",
+    "interfaces": [
+      "评测环境",
+      "Python"
+    ],
+    "platforms": "真实桌面环境",
+    "description": "评估多模态 Agent 在真实电脑任务中的完成情况。",
+    "note": "研究基准；报告成绩时需注明版本、模型、步数及评分协议。",
+    "status": "评测",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/xlang-ai/OSWorld/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "BrowserGym",
+    "category": "benchmark",
+    "repository": "ServiceNow/BrowserGym",
+    "github": "https://github.com/ServiceNow/BrowserGym",
+    "interfaces": [
+      "Python",
+      "Gym"
+    ],
+    "platforms": "浏览器任务",
+    "description": "为浏览器 Agent 提供统一任务环境与评测接口。",
+    "note": "用于研发和可重复评估，不是日常自动化产品。",
+    "status": "评测",
+    "license": "见上游许可",
+    "sources": [
+      "https://github.com/ServiceNow/BrowserGym/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Gemini API CLI",
+    "category": "cli",
+    "repository": "google-gemini/gemini-api-cli",
+    "github": "https://github.com/google-gemini/gemini-api-cli",
+    "interfaces": [
+      "CLI",
+      "JSON"
+    ],
+    "platforms": "macOS / Windows / Linux",
+    "description": "让现有 Agent 从 shell 调用 Gemini 模型、多媒体生成、文件分析与托管 Agent。",
+    "note": "无状态 API 客户端；与 Gemini CLI、Antigravity CLI 两种 Harness 区分。",
+    "status": "官方实验性",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/google-gemini/gemini-api-cli/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-06",
+    "verification": "upstream-docs"
+  }
+]
